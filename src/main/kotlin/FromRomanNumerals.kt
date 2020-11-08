@@ -22,7 +22,9 @@ class FromRomanNumerals {
         }
 
     private fun applySubtractionRule(numbers: Sequence<Int>) =
-        numbers.zipWithNext { a, b ->
-            if (a >= b) a + b else b - a
-        }
+        numbers
+            .windowed(size = 2, step = 2, partialWindows = true)
+            .map {
+                if (it[0] >= it[1]) it[0] + it[1] else it[1] - it[0]
+            }
 }
