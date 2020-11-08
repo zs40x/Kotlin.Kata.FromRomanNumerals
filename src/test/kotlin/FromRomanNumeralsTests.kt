@@ -15,6 +15,10 @@ class FromRomanNumeralsTests {
     fun romanIis1() =
        assertEquals(1, runTest("I"))
 
+    @Test
+    fun romanIIis2() =
+        assertEquals(2, runTest("II"))
+
     private fun runTest(roman: String) =
         FromRomanNumerals().convertToNumber(roman)
 }
