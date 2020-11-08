@@ -8,6 +8,9 @@ class FromRomanNumeralsTests {
 
     @Test
     fun emptyStringReturns0() {
-        assertEquals(0, FromRomanNumerals().convertToNumber(""));
+        assertEquals(0, runTest(""));
     }
+
+    private fun runTest(roman: String) =
+        FromRomanNumerals().convertToNumber(roman)
 }
