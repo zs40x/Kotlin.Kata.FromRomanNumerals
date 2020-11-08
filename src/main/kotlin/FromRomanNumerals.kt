@@ -9,6 +9,7 @@ class FromRomanNumerals {
         when (roman) {
             'I' -> 1
             'V' -> 5
+            'X' -> 10
             else -> {
                 throw Error("Unexpected roman numeral character: $roman")
             }
