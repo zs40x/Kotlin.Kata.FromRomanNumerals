@@ -3,7 +3,7 @@ import java.lang.Error
 class FromRomanNumerals {
 
     fun convertToNumber(roman: String) =
-        roman.asSequence().map({ romanToNumber(it) }).sum();
+        roman.asSequence().map { romanToNumber(it) }.sum();
 
     private fun romanToNumber(roman: Char) =
         when (roman) {
