@@ -17,6 +17,7 @@ class FromRomanNumerals {
             'X' -> 10
             'L' -> 50
             'C' -> 100
+            'M' -> 1000
             else -> {
                 throw Error("Unexpected roman numeral character: $roman")
             }
