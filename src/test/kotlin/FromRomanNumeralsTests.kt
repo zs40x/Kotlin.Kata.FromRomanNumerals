@@ -19,6 +19,10 @@ class FromRomanNumeralsTests {
     fun romanIIis2() =
         assertEquals(2, runTest("II"))
 
+    @Test
+    fun romanVIis6() =
+        assertEquals(6, runTest("VI"))
+
     private fun runTest(roman: String) =
         FromRomanNumerals().convertToNumber(roman)
 }
