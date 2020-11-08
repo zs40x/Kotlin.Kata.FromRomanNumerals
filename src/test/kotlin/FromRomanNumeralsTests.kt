@@ -23,6 +23,10 @@ class FromRomanNumeralsTests {
     fun romanVIis6() =
         assertEquals(6, runTest("VI"))
 
+    @Test
+    fun romanVis5() =
+        assertEquals(5, runTest("V"))
+
     private fun runTest(roman: String) =
         FromRomanNumerals().convertToNumber(roman)
 }
