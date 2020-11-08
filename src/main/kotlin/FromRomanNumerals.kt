@@ -3,11 +3,9 @@ import java.lang.Error
 class FromRomanNumerals {
 
     fun convertToNumber(roman: String): Int {
-        var latin =
-            roman.asSequence().map { romanToNumber(it) }
-
-        if (latin.count() > 1) return applySubtractionRule(latin).sum()
-        else return latin.sum()
+        val latin = roman.asSequence().map { romanToNumber(it) }
+        return if (latin.count() > 1) applySubtractionRule(latin).sum()
+               else latin.sum()
     }
 
     private fun romanToNumber(roman: Char) =
